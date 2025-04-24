@@ -1,0 +1,20 @@
+import express from 'express';
+import * as controller from '../controller/chatbotController.js';
+
+const router = express.Router();
+router.post('/',controller.getCountry);
+router.post('/searchSchedule',controller.searchSchedule);
+router.post('/getSchedule',controller.getSchedule);
+router.post('/searchAirplane',controller.searchAirplane);
+router.post('/searchMonthCheap',controller.searchMonthCheap);
+router.post('/searchReservation',controller.searchReservation);
+router.post('/getReservation',controller.getReservation);
+router.post('/QnaUpload',controller.QnaUpload);
+router.post('/dbQnaupload',controller.registerQna );
+router.post('/getQnaAll',controller.getQnaAll );
+router.post('/detail',controller.getQna);
+router.post('/detailNotImg',controller.detailNotImg);
+router.post('/updateComment',controller.updateComment);
+router.post('/checkCheckIn',controller.checkCheckIn);
+router.post('/getCustomerInfo',controller.getCustomerInfo);
+export default router;
